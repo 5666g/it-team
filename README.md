@@ -1,6 +1,6 @@
 # IT Team — Учебный веб-сайт для командной работы
 
-[![GitHub Pages Deployment](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-8b5cf6?style=for-the-badge&logo=github)](https://ПРЕПОДАВАТЕЛЬ.github.io/it-team/)
+[![GitHub Pages Deployment](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-8b5cf6?style=for-the-badge&logo=github)](https://rillside.github.io/it-team/)
 [![Git & GitHub Lab](https://img.shields.io/badge/Laboratory-Git%20%26%20GitHub%20PR-6366f1?style=for-the-badge&logo=git)](STUDENT_GUIDE.md)
 
 Добро пожаловать в репозиторий учебного проекта **IT Team**!
@@ -12,7 +12,7 @@
 ## 🌐 Ссылка на опубликованный сайт (GitHub Pages)
 
 > 🔗 **Живая демонстрация сайта:**  
-> **`https://ПРЕПОДАВАТЕЛЬ.github.io/it-team/`**  
+> **`https://rillside.github.io/it-team/`**  
 > *(Преподавателю: замените `ПРЕПОДАВАТЕЛЬ` на ваш логин GitHub после настройки Pages)*
 
 ---
