@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Заголовок вкладки в браузере. Замените на название вашей страницы -->
+    <title>IT Team — Шаблон страницы</title>
+    <!-- Подключение общего файла стилей из родительской папки (../style.css) -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- ======================================================================
+         ШАПКА САЙТА (HEADER) И НАВИГАЦИЯ
+         Внимание: относительные ссылки из папки pages/ на главную ведут как ../index.html,
+         а ссылки на соседние страницы — просто по имени файла (team.html, projects.html и т.д.)
+         ====================================================================== -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html" class="brand-logo">
+                <span class="brand-icon">&lt;/&gt;</span>
+                <span class="brand-text">IT <span>Team</span></span>
+            </a>
+            <!-- Меню навигации: добавьте класс "active" к ссылке текущей страницы -->
+            <nav class="site-nav" aria-label="Основное меню">
+                <a href="../index.html" class="nav-link">Главная</a>
+                <a href="team.html" class="nav-link">Команда</a>
+                <a href="projects.html" class="nav-link">Проекты</a>
+                <a href="technologies.html" class="nav-link">Технологии</a>
+                <a href="about.html" class="nav-link">О нас</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+                <a href="achievements.html" class="nav-link">Достижения</a>
+                <a href="events.html" class="nav-link">Мероприятия</a>
+                <a href="resources.html" class="nav-link">Ресурсы</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ======================================================================
+         ОСНОВНОЙ КОНТЕНТ (MAIN)
+         Сюда помещаются секции с вашим содержанием
+         ====================================================================== -->
+    <main class="main-content">
+        <div class="container">
+
+            <!-- Заголовок страницы: замените заголовок и краткое описание на свои -->
+            <header class="page-header">
+                <h1 class="page-title">📌 Название вашего раздела</h1>
+                <p class="page-subtitle">Краткое понятное описание сути данного раздела в 1-2 предложениях.</p>
+            </header>
+
+            <!-- ==============================================================
+                 ПРИМЕР СЕКЦИИ 1: СЕТКА КАРТОЧЕК (CARDS GRID)
+                 Используйте этот блок, если вам нужно показать карточки участников,
+                 проектов, технологий, достижений или ресурсов.
+                 Чтобы добавить новую карточку — просто скопируйте блок с классом "card".
+                 ============================================================== -->
+            <section class="content-section">
+                <h2 class="section-title">Пример сетки карточек</h2>
+                
+                <div class="cards-grid">
+
+                    <!-- Пример карточки №1 -->
+                    <article class="card">
+                        <div class="card-header">
+                            <span class="card-icon">🚀</span>
+                            <span class="badge badge-purple">Категория / Роль</span>
+                        </div>
+                        <h3 class="card-title">Заголовок первой карточки</h3>
+                        <p class="card-subtitle">Подзаголовок или статус</p>
+                        <p class="card-body">
+                            Основной текст карточки. Здесь вы можете описать задачу, проект, роль человека или достижение команды.
+                        </p>
+                        <div class="card-footer">
+                            <span>Дополнительная пометка</span>
+                            <span class="tag">Тег 1</span>
+                        </div>
+                    </article>
+
+                    <!-- Пример карточки №2 -->
+                    <article class="card">
+                        <div class="card-header">
+                            <span class="card-icon">💡</span>
+                            <span class="badge badge-green">Активно</span>
+                        </div>
+                        <h3 class="card-title">Заголовок второй карточки</h3>
+                        <p class="card-subtitle">Подзаголовок или специализация</p>
+                        <p class="card-body">
+                            Текст второй карточки. Вы можете дублировать столько карточек, сколько требуется по вашему заданию.
+                        </p>
+                        <div class="card-footer">
+                            <span>Дополнительная пометка</span>
+                            <span class="tag">Тег 2</span>
+                        </div>
+                    </article>
+
+                    <!-- Пример карточки №3 -->
+                    <article class="card">
+                        <div class="card-header">
+                            <span class="card-icon">⚡</span>
+                            <span class="badge badge-cyan">Инструмент</span>
+                        </div>
+                        <h3 class="card-title">Заголовок третьей карточки</h3>
+                        <p class="card-subtitle">Подзаголовок или платформа</p>
+                        <p class="card-body">
+                            Текст третьей карточки. Карточки автоматически адаптируются под размер экрана телефона или планшета.
+                        </p>
+                        <div class="card-footer">
+                            <span>Дополнительная пометка</span>
+                            <span class="tag">Тег 3</span>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- ==============================================================
+                 ПРИМЕР СЕКЦИИ 2: СТИЛИЗОВАННЫЙ СПИСОК (CUSTOM LIST)
+                 Используйте этот блок для перечисления этапов, правил, ссылок или фактов.
+                 ============================================================== -->
+            <section class="content-section">
+                <h2 class="section-title">Пример списка с маркерами</h2>
+
+                <ul class="custom-list">
+                    <li class="custom-list-item">
+                        <span class="list-item-bullet">1</span>
+                        <div>
+                            <strong>Первый пункт списка:</strong> поясняющий текст или ссылка на связанный материал.
+                        </div>
+                    </li>
+                    <li class="custom-list-item">
+                        <span class="list-item-bullet">2</span>
+                        <div>
+                            <strong>Второй пункт списка:</strong> ещё один блок с полезной информацией.
+                        </div>
+                    </li>
+                    <li class="custom-list-item">
+                        <span class="list-item-bullet">3</span>
+                        <div>
+                            <strong>Третий пункт списка:</strong> образец того, как аккуратно оформить текстовые пункты.
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- ==============================================================
+                 ПРИМЕР СЕКЦИИ 3: БЛОК УВЕДОМЛЕНИЯ / ЦИТАТА
+                 ============================================================== -->
+            <section class="content-section">
+                <div class="notice-box">
+                    <strong>Подсказка для студента:</strong> Вы можете заменить содержимое любой секции на свои тексты.
+                    Не удаляйте закрывающие теги <code>&lt;/div&gt;</code>, <code>&lt;/section&gt;</code> и структуру шапки!
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ======================================================================
+         ПОДВАЛ САЙТА (FOOTER)
+         ====================================================================== -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                &copy; 2026 IT Team. Учебный проект для практического занятия по Git и GitHub.
+            </div>
+            <ul class="footer-links">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="team.html">Команда</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
