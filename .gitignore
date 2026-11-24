@@ -32,3 +32,10 @@ yarn-error.log*
 *.tmp
 *.orig
 test.py
+check.py
+generate_docx.py
+
+# Офисные документы методических материалов (хранятся вне Git-истории)
+*.docx
+*.pdf
+
