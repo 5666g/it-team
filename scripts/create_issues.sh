@@ -15,6 +15,12 @@ if ! gh auth status &> /dev/null; then
     exit 1
 fi
 
+echo "Создание необходимых меток (labels)..."
+gh label create "lab-task" --color "8B5CF6" --description "Учебное практическое задание" --force || true
+for i in {1..8}; do
+    gh label create "student-$i" --color "6366F1" --description "Задание для студента $i" --force || true
+done
+
 echo "Создание 8 учебных задач через GitHub CLI..."
 
 tasks=(

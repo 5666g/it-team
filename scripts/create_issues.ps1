@@ -2,7 +2,7 @@
 .SYNOPSIS
     Автоматическое создание 8 учебных задач (Issues) через GitHub CLI (gh).
 .DESCRIPTION
-    Скрипт проверяет авторизацию в GitHub CLI и создаёт 8 Issues для лабораторной работы.
+    Скрипт проверяет авторизацию в GitHub CLI, создаёт метки и 8 Issues для лабораторной работы.
     Запуск: .\scripts\create_issues.ps1
 #>
 
@@ -17,6 +17,12 @@ gh auth status | Out-Null
 if ($LASTEXITCODE -ne 0) {
     Write-Host "Вы не авторизованы в GitHub CLI. Выполните: gh auth login" -ForegroundColor Yellow
     exit 1
+}
+
+Write-Host "Создание необходимых меток (labels)..." -ForegroundColor Cyan
+gh label create "lab-task" --color "8B5CF6" --description "Учебное практическое задание" --force 2>$null | Out-Null
+for ($k = 1; $k -le 8; $k++) {
+    gh label create "student-$k" --color "6366F1" --description "Задание для студента $k" --force 2>$null | Out-Null
 }
 
 Write-Host "Создание 8 учебных задач через GitHub CLI..." -ForegroundColor Cyan

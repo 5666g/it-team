@@ -5,17 +5,28 @@ on:
 
 permissions:
   issues: write
+  contents: read
 
 jobs:
   create-issues:
     runs-on: ubuntu-latest
     steps:
-      - name: Create 8 Lab Issues for Students
+      - name: Create Lab Issues for Students
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
         run: |
-          echo "Создание 8 учебных задач в репозитории $GH_REPO..."
+          echo "Создание необходимых меток (labels) в репозитории $GH_REPO..."
+          
+          # Создаем общую метку lab-task (фиолетовый цвет проекта #8b5cf6)
+          gh label create "lab-task" --color "8B5CF6" --description "Учебное практическое задание" --force || true
+          
+          # Создаем персональные метки student-1 .. student-8 (индиго #6366f1)
+          for i in {1..8}; do
+            gh label create "student-$i" --color "6366F1" --description "Задание для студента $i" --force || true
+          done
+
+          echo "Создание 8 учебных задач..."
 
           # Задача 1
           gh issue create --title "[Task 1] Заполнение страницы участников команды (pages/team.html)" \

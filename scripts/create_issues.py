@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Скрипт автоматического создания 8 Issues через GitHub REST API.
+Скрипт автоматического создания меток и 8 Issues через GitHub REST API.
 Не требует установки сторонних библиотек (использует только стандартный модуль urllib).
 
 Использование:
@@ -17,6 +17,18 @@ import json
 import argparse
 import urllib.request
 import urllib.error
+
+LABELS = [
+    {"name": "lab-task", "color": "8B5CF6", "description": "Учебное практическое задание"},
+    {"name": "student-1", "color": "6366F1", "description": "Задание для студента 1"},
+    {"name": "student-2", "color": "6366F1", "description": "Задание для студента 2"},
+    {"name": "student-3", "color": "6366F1", "description": "Задание для студента 3"},
+    {"name": "student-4", "color": "6366F1", "description": "Задание для студента 4"},
+    {"name": "student-5", "color": "6366F1", "description": "Задание для студента 5"},
+    {"name": "student-6", "color": "6366F1", "description": "Задание для студента 6"},
+    {"name": "student-7", "color": "6366F1", "description": "Задание для студента 7"},
+    {"name": "student-8", "color": "6366F1", "description": "Задание для студента 8"},
+]
 
 TASKS = [
     {
@@ -85,6 +97,25 @@ TASKS = [
     }
 ]
 
+def ensure_labels(repo: str, token: str):
+    url = f"https://api.github.com/repos/{repo}/labels"
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "IT-Team-Lab-Setup"
+    }
+    print("Проверка и создание меток (labels)...")
+    for lbl in LABELS:
+        payload = json.dumps(lbl).encode("utf-8")
+        req = urllib.request.Request(url, data=payload, headers=headers, method="POST")
+        try:
+            with urllib.request.urlopen(req) as resp:
+                pass
+        except urllib.error.HTTPError as e:
+            # 422: метка уже существует, это нормально
+            if e.code != 422:
+                print(f"Предупреждение по метке {lbl['name']}: {e.code}")
+
 def create_issue(repo: str, token: str, task: dict):
     url = f"https://api.github.com/repos/{repo}/issues"
     body = f"""### Учебное задание №{task['num']}
@@ -138,6 +169,8 @@ def main():
     if not args.token:
         print("Ошибка: укажите GitHub токен через --token или переменную GITHUB_TOKEN", file=sys.stderr)
         sys.exit(1)
+
+    ensure_labels(args.repo, args.token)
 
     print(f"Создание 8 учебных задач в репозитории {args.repo}...")
     for task in TASKS:
