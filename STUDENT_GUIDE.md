@@ -51,7 +51,7 @@
 
 ### Шаг 0. Поиск своей задачи во вкладке Issues
 Перед тем как писать команды в консоли, найдите свою персональную карточку задачи на GitHub:
-1. Откройте оригинальный репозиторий преподавателя: `https://github.com/ИМЯ_ПРЕПОДАВАТЕЛЯ/it-team`.
+1. Откройте оригинальный репозиторий преподавателя: `https://github.com/rillside/it-team`.
 2. Перейдите во вкладку **Issues** (Задачи).
 3. Найдите тикет с вашим номером задачи (например: `[Task 1] Заполнение страницы участников команды (pages/team.html)`).
 4. Откройте задачу и внимательно изучите:
@@ -65,7 +65,7 @@
 
 ### Шаг 1. Создание Fork на GitHub
 1. Откройте в браузере страницу оригинального репозитория преподавателя:
-   `https://github.com/ИМЯ_ПРЕПОДАВАТЕЛЯ/it-team`
+   `https://github.com/rillside/it-team`
 2. В правом верхнем углу страницы найдите и нажмите кнопку **Fork**.
 3. В появившемся окне оставьте название репозитория без изменений и нажмите зелёную кнопку **Create fork**.
 4. Через 2-3 секунды GitHub перенаправит вас на страницу вашей копии:
@@ -106,8 +106,8 @@ git remote -v
 ```text
 origin    https://github.com/ВАШ_ЛОГИН/it-team.git (fetch)
 origin    https://github.com/ВАШ_ЛОГИН/it-team.git (push)
-upstream  https://github.com/ИМЯ_ПРЕПОДАВАТЕЛЯ/it-team.git (fetch)
-upstream  https://github.com/ИМЯ_ПРЕПОДАВАТЕЛЯ/it-team.git (push)
+upstream  https://github.com/rillside/it-team.git (fetch)
+upstream  https://github.com/rillside/it-team.git (push)
 ```
 
 ---

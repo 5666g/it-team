@@ -37,5 +37,8 @@ generate_docx.py
 
 # Офисные документы методических материалов (хранятся вне Git-истории)
 *.docx
+*.pptx
 *.pdf
+generate_pptx.py
+TEACHER_GUIDE.md
 
