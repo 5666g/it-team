@@ -67,7 +67,7 @@ it-team/
 1. Сделайте **Fork** оригинального репозитория преподавателя в свой профиль GitHub.
 2. Склонируйте свой форк на локальный компьютер: `git clone https://github.com/ВАШ_ЛОГИН/it-team.git`.
 3. Добавьте оригинальный репозиторий как `upstream`:  
-   `git remote add upstream https://github.com/ПРЕПОДАВАТЕЛЬ/it-team.git`.
+   `git remote add upstream https://github.com/rillside/it-team.git`.
 4. Создайте отдельную ветку под вашу задачу: `git checkout -b feature/<имя-ветки>`.
 5. Отредактируйте назначенный HTML-файл по образцу из `pages/template.html`.
 6. Проверьте результат локально в браузере.
